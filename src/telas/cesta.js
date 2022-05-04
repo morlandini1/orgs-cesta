@@ -13,15 +13,15 @@ export default function Cesta() {
 
     <View style={styles.cesta}>
         <Text style={styles.nome}>Cesta de Verduras</Text>
+        <View style={styles.fazenda}>
+        <Image source={logo} style={styles.imagemFazenda}  />
         <Text style={styles.nomeFazenda}>Janny Jack Farm</Text>
-        <Image source={logo} />
+        </View>
         <Text style={styles.descricao}>
             Uma cesta com produtos selecionados 
             cuidadosamente da fazenda para 
             sua cozinha</Text>
         <Text style={styles.preco}>R$ 40,00</Text>
-            
-
     </View>
     </>
 }
@@ -51,9 +51,18 @@ nome: {
     lineHeight: 42,
     fontWeight: "bold",
   },
+  fazenda: {
+    flexDirection: "row",
+    paddingVertical: 12,
+  },
+  imagemFazenda:{
+    width: 32,
+    height: 32,
+  },
 nomeFazenda: {
     fontSize: 16,
     lineHeight: 26,
+    marginLeft: 12,
 },
 descricao: {
     color: "#A3A3A3",
