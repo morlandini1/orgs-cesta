@@ -61,7 +61,7 @@ nome: {
   },
 nomeFazenda: {
     fontSize: 16,
-    lineHeight: 26,
+    lineHeight: 27,
     marginLeft: 12,
 },
 descricao: {
