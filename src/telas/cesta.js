@@ -1,53 +1,53 @@
-import React from "react";
-import { Image, StyleSheet, Dimensions, Text, View } from "react-native";
+import React from 'react';
+import { StyleSheet, Image, Dimensions, Text, View } from 'react-native';
+
+import topo from '../../assets/topo.png';
+import logo from '../../assets/logo.png';
 
 import Texto from '../componentes/Texto';
-
-import topo from '../../assets/topo.png'
-import logo from '../../assets/logo.png'
 
 const width = Dimensions.get('screen').width;
 
 export default function Cesta() {
-    return <>
-    <Image source={topo} style={styles.topo} />
-    <Texto style={styles.titulo}>Detalhe da cesta</Texto>
+  return <>
+    <Image source={topo} style={estilos.topo} />
+    <Texto style={estilos.titulo}>Detalhe da cesta</Texto>
 
-    <View style={styles.cesta}>
-        <Text style={styles.nome}>Cesta de Verduras</Text>
-        <View style={styles.fazenda}>
-        <Image source={logo} style={styles.imagemFazenda}  />
-        <Text style={styles.nomeFazenda}>Janny Jack Farm</Text>
-        </View>
-        <Texto style={styles.descricao}>
-            Uma cesta com produtos selecionados 
-            cuidadosamente da fazenda para 
-            sua cozinha</Texto>
-        <Text style={styles.preco}>R$ 40,00</Text>
+    <View style={estilos.cesta}>
+      <Texto style={estilos.nome}>Cesta de Verduras</Texto>
+      <View style={estilos.fazenda}>
+        <Image source={logo} style={estilos.imagemFazenda} />
+        <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
+      </View>
+      <Texto style={estilos.descricao}>
+          Uma cesta com produtos selecionados 
+          cuidadosamente da fazenda direto para 
+          sua cozinha</Texto>
+      <Texto style={estilos.preco}>R$ 40,00</Texto>
     </View>
-    </>
+  </>
 }
 
-const styles = StyleSheet.create({
-topo: {
+const estilos = StyleSheet.create({
+  topo: {
     width: "100%",
     height: 578 / 768 * width,
-},
-titulo: {
+  },
+  titulo: {
     width: "100%",
     position: "absolute",
     textAlign: "center",
     fontSize: 16,
-    lineHeight: 16,
+    lineHeight: 26,
     color: "white",
     fontWeight: "bold",
     padding: 16,
-},
-cesta: {
+  },
+  cesta: {
     paddingVertical: 8,
     paddingHorizontal: 16,
-},
-nome: {
+  },
+  nome: {
     color: "#464646",
     fontSize: 26,
     lineHeight: 42,
@@ -57,26 +57,26 @@ nome: {
     flexDirection: "row",
     paddingVertical: 12,
   },
-  imagemFazenda:{
+  imagemFazenda: {
     width: 32,
     height: 32,
   },
-nomeFazenda: {
+  nomeFazenda: {
     fontSize: 16,
-    lineHeight: 27,
+    lineHeight: 26,
     marginLeft: 12,
     fontFamily: "MontserratRegular",
-},
-descricao: {
+  },
+  descricao: {
     color: "#A3A3A3",
     fontSize: 16,
     lineHeight: 26,
-},
-preco: {
+  },
+  preco: {
     color: "#2A9F85",
     fontWeight: "bold",
     fontSize: 26,
     lineHeight: 42,
     marginTop: 8,
-}  
+  },
 });

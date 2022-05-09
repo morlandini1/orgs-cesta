@@ -1,21 +1,23 @@
-import react from "react";
-import { StyleSheet, Text } from "react-native";
+import React from 'react';
+import { Text, StyleSheet } from 'react-native';
 
-export default function Texto({ children }) {
-   let style = styles.texto;
+export default function Texto({ children, style }) {
+  let estilo = estilos.texto;
+  
+  if(style?.fontWeight === 'bold') {
+    estilo = estilos.textoNegrito;
+  }
 
-if (style?.fontweight === 'bold') {
-    style = styles.textoNegrito;
+  return <Text style={[style, estilo]}>{ children }</Text>
 }
-  return <Text style={[style, styles.texto]}>{ children }</Text>
 
-}
-
-const styles = StyleSheet.create({
-    texto: {
-        fontFamily: "MontserratRegular",
-    },
-    textoNegrito: {
-        fontFamily: "MontserratBold"
-    }
-})
+const estilos = StyleSheet.create({
+  texto: {
+    fontFamily: 'MontserratRegular',
+    fontWeight: 'normal',
+  },
+  textoNegrito: {
+    fontFamily: 'MontserratBold',
+    fontWeight: 'normal',
+  }
+});
