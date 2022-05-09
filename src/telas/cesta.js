@@ -11,7 +11,7 @@ const width = Dimensions.get('screen').width;
 export default function Cesta() {
     return <>
     <Image source={topo} style={styles.topo} />
-    <Text style={styles.titulo}>Detalhe da cesta</Text>
+    <Texto style={styles.titulo}>Detalhe da cesta</Texto>
 
     <View style={styles.cesta}>
         <Text style={styles.nome}>Cesta de Verduras</Text>
